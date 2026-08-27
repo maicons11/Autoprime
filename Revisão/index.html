@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Revisão Preventiva - AutoPrime</title>
+
+<style>
+
+:root {
+    --primary-color:#c00;
+    --dark-bg:#111;
+    --light-bg:#f5f6f8;
+    --text-muted:#666;
+    --border-color:#e2e8f0;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f6f8;
+    color:#222;
+    line-height:1.6;
+}
+
+header {
+    background:#111;
+    color:white;
+    border-bottom:4px solid #c00;
+}
+
+.top-bar {
+    max-width:1140px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo {
+    font-size:28px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.logo span {
+    color:#c00;
+}
+
+.slogan {
+    color:#aaa;
+    font-size:13px;
+}
+
+.nav-links {
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a {
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover {
+    color:#c00;
+}
+
+.container {
+    max-width:900px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.materia {
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.conteudo {
+    padding:30px;
+}
+
+.tag {
+    display:inline-block;
+    background:#c00;
+    color:white;
+    padding:5px 9px;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+h1 {
+    font-size:34px;
+    line-height:1.25;
+    color:#1a202c;
+    margin-bottom:15px;
+}
+
+.subtitulo {
+    color:#666;
+    font-size:17px;
+    margin-bottom:20px;
+}
+
+.meta {
+    color:#888;
+    font-size:12px;
+    border-top:1px solid #e2e8f0;
+    padding-top:12px;
+    margin-bottom:25px;
+}
+
+.imagem-principal {
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    margin-bottom:25px;
+}
+
+.imagem-secundaria {
+    width:100%;
+    max-height:350px;
+    object-fit:cover;
+    margin:25px 0;
+}
+
+h2 {
+    font-size:23px;
+    color:#1a202c;
+    border-left:4px solid #c00;
+    padding-left:10px;
+    margin:25px 0 10px;
+}
+
+p {
+    color:#666;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.destaque {
+    background:linear-gradient(135deg,#222,#440000);
+    padding:25px;
+    border-left:4px solid #c00;
+    border-radius:4px;
+    margin:25px 0;
+}
+
+.destaque h3 {
+    color:#ff4d4d;
+    margin-bottom:8px;
+}
+
+.destaque p {
+    color:#ddd;
+    margin:0;
+}
+
+.voltar {
+    display:inline-block;
+    background:#c00;
+    color:white;
+    padding:11px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+.voltar:hover {
+    background:#a00;
+}
+
+footer {
+    background:#111;
+    color:#888;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:40px;
+    font-size:13px;
+    border-top:4px solid #c00;
+}
+
+footer p {
+    color:#888;
+    margin-bottom:5px;
+}
+
+@media(max-width:768px) {
+
+    .top-bar {
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+
+    .nav-links {
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .conteudo {
+        padding:20px;
+    }
+
+    h1 {
+        font-size:27px;
+    }
+
+    .imagem-principal {
+        height:250px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-bar">
+
+<div>
+
+<div class="logo">
+AutoPrime <span>Notícias</span>
+</div>
+
+<div class="slogan">
+O portal de inovação, peças e veículos do grupo
+</div>
+
+</div>
+
+<nav class="nav-links">
+
+<a href="../index.html">Início</a>
+
+<a href="../automotivo/index.html">Automotivo</a>
+
+<a href="../manutencao/index.html">Manutenção</a>
+
+<a href="../pecas/index.html">Peças</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main class="container">
+
+<article class="materia">
+
+<div class="conteudo">
+
+<span class="tag">
+SERVIÇOS
+</span>
+
+<h1>
+Revisão preventiva ajuda a manter o veículo em boas condições
+</h1>
+
+<p class="subtitulo">
+A avaliação periódica dos principais componentes contribui
+para a segurança, conservação e funcionamento do automóvel.
+</p>
+
+<div class="meta">
+Por Redação AutoPrime • 26 de agosto de 2026
+</div>
+
+<img
+src="../imagens/revisao.jpg"
+alt="Revisão preventiva de veículo"
+class="imagem-principal"
+>
+
+<h2>
+O que é uma revisão preventiva?
+</h2>
+
+<p>
+A revisão preventiva consiste na verificação periódica
+dos principais componentes do veículo, permitindo identificar
+desgastes e necessidades de manutenção.
+</p>
+
+<p>
+Itens como óleo, filtros, freios, pneus, suspensão e outros
+componentes podem ser avaliados de acordo com as necessidades
+do veículo e as recomendações do fabricante.
+</p>
+
+<h2>
+Por que realizar a revisão?
+</h2>
+
+<p>
+Manter as revisões em dia pode ajudar a evitar problemas
+inesperados, além de contribuir para a segurança do motorista
+e dos passageiros.
+</p>
+
+<img
+src="../imagens/revisao2.jpg"
+alt="Manutenção de veículo"
+class="imagem-secundaria"
+>
+
+<div class="destaque">
+
+<h3>
+Cuide do seu veículo
+</h3>
+
+<p>
+A prevenção é uma das melhores formas de preservar
+o funcionamento e a segurança do automóvel.
+</p>
+
+</div>
+
+<a href="../index.html" class="voltar">
+← Voltar para a página inicial
+</a>
+
+</div>
+
+</article>
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 AutoPrime — Todos os direitos reservados.
+</p>
+
+<p>
+Trabalho Acadêmico de Empreendedorismo e Geração de Renda.
+</p>
+
+</footer>
+
+</body>
+
+</html>
