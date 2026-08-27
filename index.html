@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AutoPrime Notícias</title>
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        :root {
+            --preto: #111;
+            --preto2: #1c1c1c;
+            --vermelho: #c90000;
+            --vermelho2: #980000;
+            --cinza: #666;
+            --cinza-claro: #f2f2f2;
+            --borda: #ddd;
+            --branco: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cinza-claro);
+            color: var(--preto);
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: white;
+            border-top: 5px solid var(--vermelho);
+            box-shadow: 0 2px 6px rgba(0,0,0,.1);
+        }
+
+        .topo {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 80px;
+            padding: 15px 20px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .logo span {
+            color: var(--vermelho);
+        }
+
+        .slogan {
+            font-size: 12px;
+            color: var(--cinza);
+        }
+
+        /* MENU */
+
+        .menu {
+            background: var(--preto);
+            border-bottom: 3px solid var(--vermelho);
+        }
+
+        .menu-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+        }
+
+        .menu a {
+            color: white;
+            padding: 13px 18px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: .25s;
+        }
+
+        .menu a:hover {
+            background: var(--vermelho);
+        }
+
+        /* CONTAINER */
+
+        .container {
+            max-width: 1200px;
+            margin: 25px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* DESTAQUE */
+
+        .destaque {
+            background: white;
+            border: 1px solid var(--borda);
+            border-bottom: 4px solid var(--vermelho);
+            overflow: hidden;
+        }
+
+        .imagem-destaque {
+            height: 320px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.25),
+                    rgba(0,0,0,.78)
+                ),
+                url("imagens/carro.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: flex-end;
+
+            transition: .5s;
+        }
+
+        .destaque:hover .imagem-destaque {
+            transform: scale(1.015);
+        }
+
+        .texto-destaque {
+            padding: 30px;
+            color: white;
+            max-width: 800px;
+        }
+
+        .categoria {
+            display: inline-block;
+            background: var(--vermelho);
+            color: white;
+
+            padding: 5px 9px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .texto-destaque h1 {
+            font-size: 31px;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .texto-destaque p {
+            font-size: 15px;
+            color: #eee;
+        }
+
+        /* TÍTULOS */
+
+        .titulo-secao {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin: 28px 0 15px;
+            font-size: 21px;
+        }
+
+        .titulo-secao::before {
+            content: "";
+            width: 5px;
+            height: 25px;
+            background: var(--vermelho);
+        }
+
+        /* CARDS */
+
+        .noticias {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--borda);
+            overflow: hidden;
+            cursor: pointer;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0,0,0,.14);
+        }
+
+        .card-img {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+
+            transition: .5s;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.07);
+        }
+
+        .img-peca {
+            background-image: url("imagens/peca.jpg");
+        }
+
+        .img-oficina {
+            background-image: url("imagens/oficina.jpg");
+        }
+
+        .card-conteudo {
+            padding: 18px;
+            transition: .3s;
+        }
+
+        .card:hover .card-conteudo {
+            transform: translateY(-2px);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .card p {
+            color: var(--cinza);
+            font-size: 13px;
+        }
+
+        /* PRODUTOS */
+
+        .produtos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .produto {
+            background: white;
+            border: 1px solid var(--borda);
+
+            padding: 18px;
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            transition: .3s;
+        }
+
+        .produto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0,0,0,.1);
+        }
+
+        .produto img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            transition: .4s;
+        }
+
+        .produto:hover img {
+            transform: scale(1.08);
+        }
+
+        .produto h3 {
+            margin-bottom: 5px;
+        }
+
+        .produto p {
+            color: var(--cinza);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .botao {
+            display: inline-block;
+
+            background: var(--preto);
+            color: white;
+
+            padding: 8px 14px;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            border-left: 3px solid var(--vermelho);
+
+            transition: .25s;
+        }
+
+        .botao:hover {
+            background: var(--vermelho);
+        }
+
+        /* SIDEBAR */
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .box {
+            background: white;
+            border: 1px solid var(--borda);
+            padding: 20px;
+
+            box-shadow: 0 1px 3px rgba(0,0,0,.05);
+        }
+
+        .box-titulo {
+            font-size: 17px;
+            text-transform: uppercase;
+
+            border-bottom: 3px solid var(--vermelho);
+
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* SMARTPHONE */
+
+        .celular {
+            text-align: center;
+        }
+
+        .celular img {
+            width: 180px;
+            max-width: 100%;
+            margin: 10px auto;
+            transition: .4s;
+        }
+
+        .celular:hover img {
+            transform: translateY(-8px) rotate(-2deg);
+        }
+
+        .celular h3 {
+            margin-bottom: 8px;
+        }
+
+        .celular p {
+            color: var(--cinza);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        /* SERVIÇOS */
+
+        .servico {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 11px 0;
+
+            border-bottom: 1px solid #eee;
+
+            font-size: 13px;
+        }
+
+        .servico:last-child {
+            border-bottom: none;
+        }
+
+        .preco {
+            color: var(--vermelho);
+            font-weight: bold;
+        }
+
+        .sobre-texto {
+            color: var(--cinza);
+            font-size: 14px;
+        }
+
+        /* CONTATOS */
+
+        .contatos {
+            background: var(--preto);
+            color: white;
+
+            margin-top: 50px;
+
+            border-top: 5px solid var(--vermelho);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contatos-container {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 45px 20px;
+
+            text-align: center;
+
+            position: relative;
+            z-index: 1;
+        }
+
+        .contato-tag {
+            color: var(--vermelho);
+
+            font-size: 11px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+        }
+
+        .contatos h2 {
+            font-size: 28px;
+            margin: 8px 0;
+        }
+
+        .contatos p {
+            color: #aaa;
+            font-size: 14px;
+
+            max-width: 550px;
+            margin: 0 auto 28px;
+        }
+
+        /* BOLINHAS */
+
+        .icones-redes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icone-social {
+            width: 62px;
+            height: 62px;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 25px;
+
+            background: var(--preto2);
+
+            border: 2px solid #444;
+
+            transition: .35s;
+        }
+
+        .icone-social:hover {
+            transform: translateY(-9px) scale(1.12);
+        }
+
+        .instagram:hover {
+            background: #d62976;
+            border-color: #d62976;
+            box-shadow: 0 10px 25px rgba(214,41,118,.35);
+        }
+
+        .facebook:hover {
+            background: #1877f2;
+            border-color: #1877f2;
+            box-shadow: 0 10px 25px rgba(24,119,242,.35);
+        }
+
+        .whatsapp:hover {
+            background: #25d366;
+            border-color: #25d366;
+            box-shadow: 0 10px 25px rgba(37,211,102,.35);
+        }
+
+        .nomes-redes {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+
+            margin-top: 12px;
+
+            color: #777;
+            font-size: 11px;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #080808;
+            color: #777;
+
+            padding: 25px 20px;
+
+            text-align: center;
+
+            font-size: 12px;
+        }
+
+        footer strong {
+            color: #aaa;
+        }
+
+        /* RESPONSIVO */
+
+        @media(max-width: 850px) {
+
+            .topo {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .menu-container {
+                overflow-x: auto;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 550px) {
+
+            .logo {
+                font-size: 27px;
+            }
+
+            .imagem-destaque {
+                height: 270px;
+            }
+
+            .texto-destaque {
+                padding: 20px;
+            }
+
+            .texto-destaque h1 {
+                font-size: 23px;
+            }
+
+            .noticias,
+            .produtos {
+                grid-template-columns: 1fr;
+            }
+
+            .produto {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .icone-social {
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            .nomes-redes {
+                gap: 28px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+
+    <div class="topo">
+
+        <div>
+
+            <div class="logo">
+                AutoPrime <span>Notícias</span>
+            </div>
+
+            <div class="slogan">
+                Informação, peças e soluções para seu veículo
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <nav class="menu">
+
+        <div class="menu-container">
+
+            <a href="#">Início</a>
+
+            <a href="#noticias">Notícias</a>
+
+            <a href="#pecas">Peças</a>
+
+            <a href="#servicos">Serviços</a>
+
+            <a href="#sobre">Sobre nós</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<div class="container">
+
+    <main>
+
+        <section class="destaque">
+
+            <div class="imagem-destaque">
+
+                <div class="texto-destaque">
+
+                    <span class="categoria">
+                        Destaque
+                    </span>
+
+                    <h1>
+                        AutoPrime: soluções automotivas em um só lugar
+                    </h1>
+
+                    <p>
+                        Produtos, serviços e atendimento pensado
+                        para facilitar a vida dos motoristas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <h2 class="titulo-secao" id="noticias">
+            Últimas notícias
+        </h2>
+
+
+        <section class="noticias">
+
+            <article class="card">
+
+                <div class="card-img img-peca"></div>
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">
+                        Automotivo
+                    </span>
+
+                    <h2>
+                        Peças de qualidade ajudam na segurança
+                        do veículo
+                    </h2>
+
+                    <p>
+                        A escolha de peças adequadas é fundamental
+                        para manter o desempenho e a segurança
+                        do automóvel.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-img img-oficina"></div>
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">
+                        Manutenção
+                    </span>
+
+                    <h2>
+                        Manutenção preventiva pode evitar
+                        gastos maiores
+                    </h2>
+
+                    <p>
+                        Revisões periódicas ajudam a identificar
+                        problemas antes que eles se tornem mais caros.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <h2 class="titulo-secao" id="pecas">
+            Produtos em destaque
+        </h2>
+
+
+        <section class="produtos">
+
+            <div class="produto">
+
+                <img src="imagens/peca.png"
+                     alt="Peça automotiva">
+
+                <div>
+
+                    <h3>
+                        Peças automotivas
+                    </h3>
+
+                    <p>
+                        Produtos selecionados para diferentes
+                        necessidades do seu veículo.
+                    </p>
+
+                    <a href="#contato" class="botao">
+                        Solicitar informações
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="produto">
+
+                <img src="imagens/smartphone.png"
+                     alt="Smartphone">
+
+                <div>
+
+                    <h3>
+                        Atendimento digital
+                    </h3>
+
+                    <p>
+                        Consulte produtos, preços e serviços
+                        através do seu smartphone.
+                    </p>
+
+                    <a href="#contato" class="botao">
+                        Conheça nossos canais
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <h2 class="titulo-secao" id="servicos">
+            Nossos serviços
+        </h2>
+
+
+        <section class="noticias">
+
+            <article class="card">
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">
+                        Diagnóstico
+                    </span>
+
+                    <h2>
+                        Diagnóstico computadorizado
+                    </h2>
+
+                    <p>
+                        Identificação de falhas eletrônicas
+                        e avaliação dos sistemas do veículo.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-conteudo">
+
+                    <span class="categoria">
+                        Manutenção
+                    </span>
+
+                    <h2>
+                        Revisão preventiva
+                    </h2>
+
+                    <p>
+                        Cuidados essenciais para manter o veículo
+                        funcionando com segurança e eficiência.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <aside>
+
+        <div class="box celular">
+
+            <h2 class="box-titulo">
+                AutoPrime no celular
+            </h2>
+
+            <img src="imagens/smartphone.png"
+                 alt="Smartphone">
+
+            <h3>
+                Tudo na palma da mão
+            </h3>
+
+            <p>
+                Acesse nossas informações e conheça
+                nossos produtos e serviços.
+            </p>
+
+            <a href="#contato" class="botao">
+                Acessar canais
+            </a>
+
+        </div>
+
+
+        <div class="box">
+
+            <h2 class="box-titulo">
+                Serviços
+            </h2>
+
+            <div class="servico">
+                <span>Diagnóstico</span>
+                <span class="preco">R$ 200</span>
+            </div>
+
+            <div class="servico">
+                <span>Revisão preventiva</span>
+                <span class="preco">R$ 350</span>
+            </div>
+
+            <div class="servico">
+                <span>Kit filtros + óleo</span>
+                <span class="preco">R$ 180</span>
+            </div>
+
+            <div class="servico">
+                <span>Peças automotivas</span>
+                <span class="preco">Consulte</span>
+            </div>
+
+        </div>
+
+
+        <div class="box" id="sobre">
+
+            <h2 class="box-titulo">
+                Sobre a AutoPrime
+            </h2>
+
+            <p class="sobre-texto">
+
+                A AutoPrime busca oferecer produtos,
+                serviços e informações para tornar a
+                experiência dos motoristas mais simples,
+                segura e eficiente.
+
+            </p>
+
+        </div>
+
+    </aside>
+
+</div>
+  <section class="contatos" id="contato">
+
+    <div class="contatos-container">
+
+        <span class="contato-tag">
+            FALE CONOSCO
+        </span>
+
+        <h2>
+            Entre em contato com a AutoPrime
+        </h2>
+
+        <p>
+            Acompanhe nossas novidades ou fale diretamente
+            com nossa equipe através das nossas redes sociais.
+        </p>
+
+
+        <div class="icones-redes">
+
+            <!-- INSTAGRAM -->
+            <a href="SEU_LINK_INSTAGRAM"
+               class="icone-social instagram"
+               aria-label="Instagram"
+               title="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <!-- FACEBOOK -->
+            <a href="SEU_LINK_FACEBOOK"
+               class="icone-social facebook"
+               aria-label="Facebook"
+               title="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+            <a href="SEU_LINK_WHATSAPP"
+               class="icone-social whatsapp"
+               aria-label="WhatsApp"
+               title="WhatsApp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="nomes-redes">
+
+            <span>Instagram</span>
+
+            <span>Facebook</span>
+
+            <span>WhatsApp</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        <strong>AutoPrime Notícias</strong>
+    </p>
+
+    <p>
+        Informação, peças e soluções automotivas.
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 AutoPrime — Trabalho Acadêmico
+        de Empreendedorismo e Geração de Renda.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
