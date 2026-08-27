@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Peças Automotivas - AutoPrime</title>
+
+<style>
+
+:root {
+    --primary-color:#c00;
+    --dark-bg:#111;
+    --light-bg:#f5f6f8;
+    --text-main:#222;
+    --text-muted:#666;
+    --border-color:#e2e8f0;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light-bg);
+    color:var(--text-main);
+    line-height:1.6;
+}
+
+header {
+    background:var(--dark-bg);
+    color:white;
+    border-bottom:4px solid var(--primary-color);
+}
+
+.top-bar {
+    max-width:1140px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo {
+    font-size:28px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.logo span {
+    color:var(--primary-color);
+}
+
+.slogan {
+    color:#aaa;
+    font-size:13px;
+}
+
+.nav-links {
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a {
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover {
+    color:var(--primary-color);
+}
+
+.container {
+    max-width:900px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.materia {
+    background:white;
+    border:1px solid var(--border-color);
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.materia-conteudo {
+    padding:30px;
+}
+
+.tag {
+    display:inline-block;
+    background:var(--primary-color);
+    color:white;
+    padding:5px 9px;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+    border-radius:2px;
+    margin-bottom:12px;
+}
+
+h1 {
+    font-size:34px;
+    line-height:1.25;
+    color:#1a202c;
+    margin-bottom:15px;
+}
+
+.subtitulo {
+    font-size:17px;
+    color:var(--text-muted);
+    margin-bottom:20px;
+}
+
+.meta {
+    font-size:12px;
+    color:#888;
+    border-top:1px solid var(--border-color);
+    padding-top:12px;
+    margin-bottom:25px;
+}
+
+.imagem-principal {
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+    margin-bottom:25px;
+}
+
+.imagem-secundaria {
+    width:100%;
+    max-height:350px;
+    object-fit:cover;
+    display:block;
+    margin:25px 0;
+}
+
+.materia h2 {
+    font-size:23px;
+    color:#1a202c;
+    border-left:4px solid var(--primary-color);
+    padding-left:10px;
+    margin:25px 0 10px;
+}
+
+.materia p {
+    color:var(--text-muted);
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.destaque {
+    background:linear-gradient(135deg,#222,#440000);
+    color:white;
+    padding:25px;
+    margin:25px 0;
+    border-radius:4px;
+    border-left:4px solid var(--primary-color);
+}
+
+.destaque h3 {
+    color:#ff4d4d;
+    margin-bottom:8px;
+}
+
+.destaque p {
+    color:#ddd;
+    margin:0;
+}
+
+.voltar {
+    display:inline-block;
+    background:var(--primary-color);
+    color:white;
+    padding:11px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+    border-radius:4px;
+}
+
+.voltar:hover {
+    background:#a00;
+}
+
+footer {
+    background:var(--dark-bg);
+    color:#888;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:40px;
+    font-size:13px;
+    border-top:4px solid var(--primary-color);
+}
+
+footer p {
+    margin-bottom:5px;
+}
+
+@media(max-width:768px) {
+
+    .top-bar {
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+
+    .nav-links {
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .materia-conteudo {
+        padding:20px;
+    }
+
+    h1 {
+        font-size:27px;
+    }
+
+    .imagem-principal {
+        height:250px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-bar">
+
+<div>
+
+<div class="logo">
+AutoPrime <span>Notícias</span>
+</div>
+
+<div class="slogan">
+O portal de inovação, peças e veículos do grupo
+</div>
+
+</div>
+
+<nav class="nav-links">
+
+<a href="../index.html">Início</a>
+
+<a href="../automotivo/index.html">Automotivo</a>
+
+<a href="../manutencao/index.html">Manutenção</a>
+
+<a href="../revisao/index.html">Serviços</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main class="container">
+
+<article class="materia">
+
+<div class="materia-conteudo">
+
+<span class="tag">
+PRODUTOS
+</span>
+
+<h1>
+Peças automotivas: qualidade para cuidar do seu veículo
+</h1>
+
+<p class="subtitulo">
+Conheça a importância de utilizar componentes adequados
+e de boa procedência na manutenção automotiva.
+</p>
+
+<div class="meta">
+Por Redação AutoPrime • 26 de agosto de 2026
+</div>
+
+<img
+src="../imagens/pecas.jpg"
+alt="Peças automotivas"
+class="imagem-principal"
+>
+
+<h2>
+A importância de escolher boas peças
+</h2>
+
+<p>
+As peças automotivas são fundamentais para o funcionamento
+dos diferentes sistemas de um veículo. Cada componente
+possui uma função específica e deve ser compatível com
+o modelo do automóvel.
+</p>
+
+<p>
+Utilizar peças adequadas contribui para manter o desempenho
+e a segurança do veículo, além de ajudar na durabilidade
+dos componentes.
+</p>
+
+<h2>
+Variedade para diferentes necessidades
+</h2>
+
+<p>
+A AutoPrime trabalha com a proposta de oferecer opções
+para diferentes necessidades de manutenção, facilitando
+a busca do cliente por produtos automotivos.
+</p>
+
+<img
+src="../imagens/pecas2.jpg"
+alt="Componentes automotivos"
+class="imagem-secundaria"
+>
+
+<div class="destaque">
+
+<h3>
+AutoPrime
+</h3>
+
+<p>
+Peças e soluções automotivas com praticidade,
+informação e atendimento.
+</p>
+
+</div>
+
+<a href="../index.html" class="voltar">
+← Voltar para a página inicial
+</a>
+
+</div>
+
+</article>
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 AutoPrime — Todos os direitos reservados.
+</p>
+
+<p>
+Trabalho Acadêmico de Empreendedorismo e Geração de Renda.
+</p>
+
+</footer>
+
+</body>
+
+</html>
