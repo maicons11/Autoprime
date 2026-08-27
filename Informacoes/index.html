@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Informações e Contato - AutoPrime</title>
+
+<style>
+
+:root {
+    --primary-color:#c00;
+    --dark-bg:#111;
+    --light-bg:#f5f6f8;
+    --text-main:#222;
+    --text-muted:#666;
+    --border-color:#e2e8f0;
+}
+
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light-bg);
+    color:var(--text-main);
+}
+
+header {
+    background:#111;
+    color:white;
+    border-bottom:4px solid #c00;
+}
+
+.top-bar {
+    max-width:1140px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo {
+    font-size:28px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.logo span {
+    color:#c00;
+}
+
+.slogan {
+    color:#aaa;
+    font-size:13px;
+}
+
+.nav-links {
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a {
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover {
+    color:#c00;
+}
+
+.container {
+    max-width:900px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.caixa {
+    background:white;
+    padding:35px;
+    border:1px solid var(--border-color);
+    border-radius:4px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.tag {
+    display:inline-block;
+    background:#c00;
+    color:white;
+    padding:5px 9px;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+h1 {
+    font-size:34px;
+    margin-bottom:15px;
+    color:#1a202c;
+}
+
+.intro {
+    color:#666;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+h2 {
+    font-size:22px;
+    color:#1a202c;
+    border-left:4px solid #c00;
+    padding-left:10px;
+    margin:25px 0 12px;
+}
+
+p {
+    color:#666;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.redes {
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.rede {
+    flex:1;
+    min-width:180px;
+    padding:18px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    text-align:center;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.rede:hover {
+    background:#c00;
+    transform:translateY(-3px);
+}
+
+.voltar {
+    display:inline-block;
+    margin-top:30px;
+    background:#c00;
+    color:white;
+    padding:11px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+.voltar:hover {
+    background:#a00;
+}
+
+footer {
+    background:#111;
+    color:#888;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:40px;
+    font-size:13px;
+    border-top:4px solid #c00;
+}
+
+footer p {
+    color:#888;
+    margin-bottom:5px;
+}
+
+@media(max-width:768px) {
+
+    .top-bar {
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+
+    .nav-links {
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    .caixa {
+        padding:22px;
+    }
+
+    h1 {
+        font-size:27px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="top-bar">
+
+<div>
+
+<div class="logo">
+AutoPrime <span>Notícias</span>
+</div>
+
+<div class="slogan">
+O portal de inovação, peças e veículos do grupo
+</div>
+
+</div>
+
+<nav class="nav-links">
+
+<a href="../index.html">Início</a>
+
+<a href="../automotivo/index.html">Automotivo</a>
+
+<a href="../pecas/index.html">Peças</a>
+
+<a href="../revisao/index.html">Serviços</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main class="container">
+
+<section class="caixa">
+
+<span class="tag">
+ATENDIMENTO
+</span>
+
+<h1>
+Fale com a AutoPrime
+</h1>
+
+<p class="intro">
+Precisa de informações sobre peças, serviços ou
+manutenção? Entre em contato com nossa equipe através
+dos nossos canais de atendimento.
+</p>
+
+<h2>
+Como podemos ajudar?
+</h2>
+
+<p>
+Nossa equipe está disponível para esclarecer dúvidas,
+fornecer informações sobre produtos e serviços e auxiliar
+na escolha da melhor solução para o seu veículo.
+</p>
+
+<h2>
+Entre em contato
+</h2>
+
+<p>
+Escolha uma das opções abaixo para falar conosco
+e acompanhar as novidades da AutoPrime.
+</p>
+
+
+<div class="redes">
+
+<a href="https://www.instagram.com/"
+class="rede"
+target="_blank">
+
+📷 Instagram
+
+</a>
+
+<a href="https://www.facebook.com/"
+class="rede"
+target="_blank">
+
+📘 Facebook
+
+</a>
+
+<a href="https://wa.me/5500000000000"
+class="rede"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+
+<a href="../index.html" class="voltar">
+
+← Voltar para a página inicial
+
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 AutoPrime — Todos os direitos reservados.
+</p>
+
+<p>
+Trabalho Acadêmico de Empreendedorismo e Geração de Renda.
+</p>
+
+</footer>
+
+</body>
+
+</html>
